@@ -409,12 +409,49 @@ body {
   letter-spacing: .4px;
   text-align: right;
 }
+
+/* ── PAGE NAVIGATION TABS ───────────────────────────────── */
+#page-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 16px;
+}
+.nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  transition: background .18s, color .18s;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+.nav-tab:hover {
+  background: rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.92);
+}
+.nav-tab.active {
+  background: rgba(59,130,246,0.25);
+  color: #fff;
+  border: 1px solid rgba(59,130,246,0.45);
+}
+.nav-tab .nav-icon { font-size: 14px; }
 </style>
 </head>
 <body>
 
 <!-- TOP BAR -->
 <div id="topbar">
+  <div id="page-nav">
+    <a href="kanban.html" class="nav-tab active"><span class="nav-icon">📋</span>Kanban</a>
+    <a href="kanban_chart.html" class="nav-tab"><span class="nav-icon">📊</span>Analítica</a>
+    <a href="Produccion.html" class="nav-tab"><span class="nav-icon">🏭</span>Producción</a>
+  </div>
 
   <!-- Logo GNio -->
   <div id="topbar-left">
